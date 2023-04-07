@@ -95,6 +95,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Given("I am on the SwagLabs website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 8
+ testRunner.When("I login with username standard_user and password secret_sauce", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 9
+ testRunner.Then("Swag Labs should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

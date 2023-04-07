@@ -2,6 +2,7 @@ using System;
 using TechTalk.SpecFlow;
 using MQTASelenium;
 using OpenQA.Selenium;
+using NUnit.Framework;
 
 namespace SpecflowSeleniumOnCSharp.StepDefinitions
 {
@@ -14,15 +15,30 @@ namespace SpecflowSeleniumOnCSharp.StepDefinitions
             Browser.Goto(website);
         }
 
-        [When(@"I login")]
-        public void WhenIogin()
+        [When(@"I login with username (.*) and password (.*)")]
+        public void WhenILoginWithUsernameAndPassword(String username, String password)
         {
-            Pages.Login.EnterCredentials("DFLocal", "cadmin", "1"); 
+            Pages.Login.EnterCredentials(username, password); 
             Pages.Login.ClickLogin();
-            Pages.SharedComponents.WaitLoading(By.Id("splashScreenContainer"));
-            Pages.SharedComponents.AcceptCookies();
-            Thread.Sleep(TimeSpan.FromSeconds(30));
         }
+
+        //then @swaglabs should be display
+        [Then(@"(.*) should be displayed")]
+        public void ThenShouldBeDisplayed(String Title)
+        {
+            Assert.True(Title == Browser.Title);
+            /*if (website == "SwagLabs")
+            {
+                Assert.
+            }
+            else if (website == "Magento")
+            {
+                Pages.SharedComponents.MagentoLogo();
+            }*/
+        }   
+
+
+
 
         [When(@"user clicks on Hamburger Icon")]
         public void WhenUserClicksOnHamburgerIcon()

@@ -6,22 +6,19 @@ namespace MQTASelenium;
 
 public class LoginPage : SharedComponents, IPage
 {
-    [FindsBy(How = How.Id, Using = "txtCompanyName")]
-    private IWebElement companyNameTextField;
-
-    [FindsBy(How = How.Id, Using = "txtUserName")]
+    [FindsBy(How = How.Id, Using = "user-name")]
     private IWebElement usernameTextField;
 
-    [FindsBy(How = How.Id, Using = "txtUserPass")]
+    [FindsBy(How = How.Id, Using = "password")]
     private IWebElement passwordTextField;
 
-    [FindsBy(How = How.Id, Using = "MainContent_loginUI_cmdLogin")]
+    [FindsBy(How = How.Id, Using = "login-button")]
     private IWebElement logInButton;
 
 
-    public void EnterCredentials(string companyName,string username, string password)
+    public void EnterCredentials(string username, string password)
     {
-        companyNameTextField.SendKeys(companyName);
+        Browser.webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         usernameTextField.SendKeys(username);
         passwordTextField.SendKeys(password);
     }

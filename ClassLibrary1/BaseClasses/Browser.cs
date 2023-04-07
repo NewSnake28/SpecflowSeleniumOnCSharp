@@ -8,7 +8,7 @@ namespace MQTASelenium
 {
     public class Browser
     {
-        public static string SwagLabs = "http://www.saucedemo.com";
+        public static string SwagLabs = "http://www.saucedemo.com/";
         public static string Magento = "https://magento.softwaretestingboard.com/";
 
         public static string baseUrl;
@@ -27,7 +27,6 @@ namespace MQTASelenium
 
         public static void Goto(String website)
         {
-            //switch case to select url form declared public variables for different URLs
             switch (website)
             {
                 case "SwagLabs":

@@ -8,10 +8,11 @@ namespace MQTASelenium
 {
     public class Browser
     {
-        public static string SwagLabs = "https://www.saucedemo.com/";
+        public static string SwagLabs = "http://www.saucedemo.com";
         public static string Magento = "https://magento.softwaretestingboard.com/";
+
         public static string baseUrl;
-        public static WebDriver webDriver = new ChromeDriver(@"C:\DRIVERS");
+        public static WebDriver webDriver = new ChromeDriver();
 
 
         public static string Title
@@ -35,9 +36,8 @@ namespace MQTASelenium
                 case "Magento":
                     baseUrl = Magento;
                     break;
-                default:
-                    throw new Exception("Please select a valid URL");
             }
+
             webDriver.Navigate().GoToUrl(baseUrl);
         }
 

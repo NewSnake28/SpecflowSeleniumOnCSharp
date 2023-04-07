@@ -8,10 +8,10 @@ namespace SpecflowSeleniumOnCSharp.StepDefinitions
     [Binding]
     public class Test1StepDefinitions
     {
-        [Given(@"I am on the login page")]
-        public void GivenIAmOnTheLoginPage()
+        [Given(@"I am on the (.*) website")]
+        public void GivenIAmOnTheWebsite(String website)
         {
-            Browser.Goto();
+            Browser.Goto(website);
         }
 
         [When(@"I login")]

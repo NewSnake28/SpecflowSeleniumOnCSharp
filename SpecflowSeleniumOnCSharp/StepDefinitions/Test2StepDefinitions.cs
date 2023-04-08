@@ -107,12 +107,29 @@ namespace SpecflowSeleniumOnCSharp.StepDefinitions
         }
 
 
-           // /html/body/div[1]/header/div[2]/div[1]/div/div/div/div[2]/div[5]/div/a
+        //go to about page
+        [When(@"I click on the About Us link from footer")]
+        public void WhenIClickOnTheAboutUsLink()
+        {
+            Task.Delay(2000).Wait();
+            Browser.webDriver.FindElement(By.XPath(@"/html/body/div[1]/footer/div/div[2]/div/ul/li[1]/a")).Click();
+        
+        }
+
+        //go to about page
+        [When(@"I click on the whats new button form the navigation bar")]
+        public void WhenIClickOnTheWhatsNewPage()
+        {
+            Task.Delay(2000).Wait();
+            Browser.webDriver.FindElement(By.XPath(@"/html/body/div[1]/main/div[1]/h1/span")).Click();
+        }
+
+            // /html/body/div[1]/header/div[2]/div[1]/div/div/div/div[2]/div[5]/div/a
 
 
-
-        ////html/body/div[1]/main/div[3]/div/div[2]/div[3]/div/div/ol/li[1]
-        ////html/body/div[1]/main/div[3]/div/div[2]/div[3]/div/div/ol/li[3]/div/a/span/span/img
-        /////*[@id="maincontent"]/div[3]/div[1]/div[2]/div[2]/ol/li[1]/div/a
+            ////html/body/div[1]/main/div[1]/h1/span
+            ////html/body/div[1]/main/div[3]/div/div[2]/div[3]/div/div/ol/li[1]
+            ////html/body/div[1]/main/div[3]/div/div[2]/div[3]/div/div/ol/li[3]/div/a/span/span/img
+            /////*[@id="maincontent"]/div[3]/div[1]/div[2]/div[2]/ol/li[1]/div/a
+        }
     }
-}

@@ -43,3 +43,15 @@ Scenario: Add to cart
 	| SearchTerm | Product | Title         |
 	| fitness    | 1       | Shopping Cart |
 	| fitness    | 3       | Shopping Cart |
+
+
+@tag4
+Scenario: Go to about page
+	Given I am on the Magento website
+	When I click on the About Us link from footer
+
+
+@tag5
+Scenario: Go to the What's New page
+	Given I am on the Magento website
+	When I click on the whats new button form the navigation bar

@@ -1,4 +1,5 @@
-﻿using SeleniumExtras.PageObjects;
+﻿using MQTASelenium.BaseClasses.Pages;
+using SeleniumExtras.PageObjects;
 namespace MQTASelenium;
 
 public class Pages
@@ -24,5 +25,9 @@ public class Pages
         get { return GetPage<HRAdminPage>(); }
     }
 
+    public static Cart Cart
+    {
+        get { return GetPage<Cart>(); }
+    }
 
 }

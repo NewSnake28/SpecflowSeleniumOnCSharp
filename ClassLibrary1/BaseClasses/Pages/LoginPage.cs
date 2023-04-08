@@ -15,6 +15,15 @@ public class LoginPage : SharedComponents, IPage
     [FindsBy(How = How.Id, Using = "login-button")]
     private IWebElement logInButton;
 
+    [FindsBy(How = How.Id, Using = "email")]
+    private IWebElement emailTextField;
+
+    [FindsBy(How = How.Id, Using = "pass")]
+    private IWebElement passTextField;
+
+    [FindsBy(How = How.Id, Using = "send2")]
+    private IWebElement signInButton;
+
 
     public void EnterCredentials(string username, string password)
     {
@@ -26,5 +35,17 @@ public class LoginPage : SharedComponents, IPage
     public void ClickLogin()
     {
         logInButton.Click();
+    }
+
+    public void EnterEmailCredentials(String email, String password)
+    {
+        Browser.webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+        emailTextField.SendKeys(email);
+        passTextField.SendKeys(password);
+    }
+
+    public void SignIn()
+    {
+        signInButton.Click();
     }
 }

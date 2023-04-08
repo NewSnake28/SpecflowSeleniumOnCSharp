@@ -25,9 +25,8 @@ public class Pages
         get { return GetPage<HRAdminPage>(); }
     }
 
-    public static Cart Cart
+    public static Codes Codes
     {
-        get { return GetPage<Cart>(); }
+        get { return GetPage<Codes>(); }
     }
-
 }

@@ -67,7 +67,7 @@ namespace SpecflowSeleniumOnCSharp.StepDefinitions
         [When(@"I click on checkout button")]
         public void WhenICheckOut()
         {
-            Browser.webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            Browser.webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             Browser.webDriver.FindElement(By.Id("checkout")).Click();
         }
 
@@ -75,7 +75,7 @@ namespace SpecflowSeleniumOnCSharp.StepDefinitions
         [When(@"I continue with firstname (.*) and lastname (.*) and postalcode (.*)")]
         public void WhenIContinueCheckout(String firstname, String lastname, String postalcode)
         {
-            Browser.webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            Browser.webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             Browser.webDriver.FindElement(By.Id("first-name")).SendKeys(firstname);
             Browser.webDriver.FindElement(By.Id("last-name")).SendKeys(lastname);
             Browser.webDriver.FindElement(By.Id("postal-code")).SendKeys(postalcode);

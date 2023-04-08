@@ -25,6 +25,8 @@ namespace MQTASelenium
         [FindsBy(How = How.ClassName, Using = "toast-success")]
         private IWebElement ToastSuccessMessage;
 
+
+
         public void AcceptCookies()
         {
             Cookies.Click();
@@ -56,5 +58,7 @@ namespace MQTASelenium
             var wait = new WebDriverWait(Browser.webDriver, TimeSpan.FromSeconds(10));
             wait.Until(d => d.FindElement(By.ClassName("toast-success")));
         }
+
+
     }
 }

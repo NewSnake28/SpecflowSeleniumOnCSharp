@@ -93,7 +93,7 @@ namespace SpecflowSeleniumOnCSharp.Features
             argumentsOfScenario.Add("Username", username);
             argumentsOfScenario.Add("Password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -103,13 +103,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
+#line 9
  testRunner.Given("I am on the SwagLabs website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 9
+#line 10
  testRunner.When(string.Format("I login with username {0} and password {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 11
  testRunner.Then("Swag Labs should be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -118,18 +118,25 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Logout")]
+        [NUnit.Framework.CategoryAttribute("tag2")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", null)]
         [NUnit.Framework.TestCaseAttribute("problem_user", "secret_sauce", "Swag Labs", null)]
         [NUnit.Framework.TestCaseAttribute("performance_glitch_user", "secret_sauce", "Swag Labs", null)]
         public void Logout(string username, string password, string title, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "tag2"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Username", username);
             argumentsOfScenario.Add("Password", password);
             argumentsOfScenario.Add("Title", title);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Logout", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 20
+#line 23
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -139,22 +146,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 21
+#line 24
  testRunner.Given("I am on the SwagLabs website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
+#line 25
  testRunner.When(string.Format("I login with username {0} and password {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 26
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 24
+#line 27
  testRunner.When("I click on the hamburger icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 28
  testRunner.And("I click on Logout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 29
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -163,13 +170,20 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Sorting")]
+        [NUnit.Framework.CategoryAttribute("tag3")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "product_sort_container", "1", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "product_sort_container", "2", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "product_sort_container", "3", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "product_sort_container", "4", null)]
         public void Sorting(string username, string password, string title, string filter, string sort, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "tag3"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Username", username);
             argumentsOfScenario.Add("Password", password);
@@ -177,7 +191,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Filter", filter);
             argumentsOfScenario.Add("Sort", sort);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sorting", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 34
+#line 39
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -187,16 +201,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 35
+#line 40
  testRunner.Given("I am on the SwagLabs website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 36
+#line 41
  testRunner.When(string.Format("I login with username {0} and password {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 37
+#line 42
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 38
+#line 43
  testRunner.When(string.Format("I click on the {0} icon and choose an {1} option", filter, sort), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
@@ -205,19 +219,26 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add to cart")]
+        [NUnit.Framework.CategoryAttribute("tag4")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "add-to-cart-sauce-labs-backpack", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "add-to-cart-sauce-labs-fleece-jacket", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "add-to-cart-sauce-labs-bike-light", null)]
         public void AddToCart(string username, string password, string title, string product, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "tag4"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Username", username);
             argumentsOfScenario.Add("Password", password);
             argumentsOfScenario.Add("Title", title);
             argumentsOfScenario.Add("Product", product);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add to cart", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 47
+#line 54
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -227,22 +248,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 48
+#line 55
  testRunner.Given("I am on the SwagLabs website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 49
+#line 56
  testRunner.When(string.Format("I login with username {0} and password {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
+#line 57
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 51
+#line 58
  testRunner.When(string.Format("I click on {0} button to add to cart", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 52
+#line 59
  testRunner.And("I click on cart icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 53
+#line 60
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -251,12 +272,19 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Checkout Cart")]
+        [NUnit.Framework.CategoryAttribute("tag5")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "add-to-cart-sauce-labs-backpack", "Test", "Testing", "12345", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "add-to-cart-sauce-labs-fleece-jacket", "Test", "Testing", "12345", null)]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "Swag Labs", "add-to-cart-sauce-labs-bike-light", "Test", "Testing", "12345", null)]
         public void CheckoutCart(string username, string password, string title, string product, string firstname, string lastname, string postalcode, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "tag5"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Username", username);
             argumentsOfScenario.Add("Password", password);
@@ -266,7 +294,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("Lastname", lastname);
             argumentsOfScenario.Add("Postalcode", postalcode);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Checkout Cart", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 61
+#line 70
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -276,40 +304,40 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 62
+#line 71
  testRunner.Given("I am on the SwagLabs website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 63
+#line 72
  testRunner.When(string.Format("I login with username {0} and password {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 64
+#line 73
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 65
+#line 74
  testRunner.When(string.Format("I click on {0} button to add to cart", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 66
+#line 75
  testRunner.And("I click on cart icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 76
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 68
+#line 77
  testRunner.When("I click on checkout button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 69
+#line 78
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 70
+#line 79
  testRunner.When(string.Format("I continue with firstname {0} and lastname {1} and postalcode {2}", firstname, lastname, postalcode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 71
+#line 80
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 72
+#line 81
  testRunner.When("I click on the checkout finish button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 73
+#line 82
  testRunner.Then(string.Format("{0} should be displayed", title), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

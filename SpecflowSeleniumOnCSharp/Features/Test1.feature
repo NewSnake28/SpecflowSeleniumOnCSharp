@@ -3,6 +3,7 @@
 Swag Labs website
 All tests are run independently from each other
 
+
 @tag1
 Scenario: Login
 	Given I am on the SwagLabs website
@@ -16,6 +17,7 @@ Scenario: Login
 	| locked_out_user         | secret_sauce |
 	| problem_user            | secret_sauce |
 	| performance_glitch_user | secret_sauce |
+
 
 @tag2
 Scenario: Logout
@@ -32,6 +34,7 @@ Scenario: Logout
 	| problem_user            | secret_sauce | Swag Labs |
 	| performance_glitch_user | secret_sauce | Swag Labs |
 	
+
 @tag3
 Scenario: Sorting
 	Given I am on the SwagLabs website
@@ -46,6 +49,7 @@ Scenario: Sorting
 	| standard_user | secret_sauce | Swag Labs | product_sort_container | 3    |
 	| standard_user | secret_sauce | Swag Labs | product_sort_container | 4    |
 	
+
 @tag4
 Scenario: Add to cart
 	Given I am on the SwagLabs website
@@ -61,6 +65,7 @@ Scenario: Add to cart
 	| standard_user | secret_sauce | Swag Labs | add-to-cart-sauce-labs-fleece-jacket |
 	| standard_user | secret_sauce | Swag Labs | add-to-cart-sauce-labs-bike-light    |
 	
+
 @tag5
 Scenario: Checkout Cart
 	Given I am on the SwagLabs website

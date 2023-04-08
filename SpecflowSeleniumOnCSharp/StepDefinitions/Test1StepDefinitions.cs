@@ -103,8 +103,8 @@ namespace SpecflowSeleniumOnCSharp.StepDefinitions
         {
             Browser.webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             Browser.webDriver.FindElement(By.ClassName(Filter)).Click();
-            Browser.webDriver.FindElement(By.XPath("/html/body/div/div/div/div[1]/div[2]/div/span/select/option['" + value + "']")).Click();
-
+            Browser.webDriver.FindElement(By.XPath(@"//html/body/div/div/div/div[1]/div[2]/div/span/select/option[" + value + "]")).Click();
+            
         }
 
 
